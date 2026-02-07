@@ -1,0 +1,111 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(#ffedef, #ffd1d7);
+  overflow: hidden;
+}
+
+/* Balloon Animation */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  font-size: 30px;
+  animation: floatUp 7s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* The Card */
+.question-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
+  z-index: 10;
+  width: 85%;
+}
+
+.heart-icon { font-size: 50px; animation: pulse 1.5s infinite; }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.btn-group { margin-top: 25px; display: flex; justify-content: space-around; }
+
+.yes-btn {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.no-btn {
+  background: white;
+  color: #ff4d6d;
+  border: 2px solid #ff4d6d;
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: all 0.1s ease;
+}
+
+.timeline-container {
+  padding: 20px;
+  max-height: 100vh;
+  overflow-y: auto; /* Enable scrolling for the photos */
+  background: white;
+}
+
+.header-text {
+  color: #ff4d6d;
+  margin-bottom: 30px;
+}
+
+.memory-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  padding: 10px;
+  border: 1px solid #ffedef;
+}
+
+.memory-date {
+  font-weight: bold;
+  color: #ff4d6d;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.memory-img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.memory-desc {
+  padding: 15px 5px;
+  font-style: italic;
+  color: #555;
+}
+
+.final-note {
+  padding: 50px 0;
+  font-weight: bold;
+  color: #ff4d6d;
+}
